@@ -38,6 +38,7 @@ namespace StudentsMarks
             SqlDataAdapter dA = new SqlDataAdapter(StudentsMarks.Program.SQLstr, StudentsMarks.Program.ConnectionString);
             dA.Fill(this.studentsMarksDataSet, "Студенты");
             this.dataGridView1.DataSource = this.studentsMarksDataSet.Tables["Студенты"].DefaultView;
+            this.студентыGridControl.DataSource = this.studentsMarksDataSet.Tables["Студенты"].DefaultView;
 
         }
     }

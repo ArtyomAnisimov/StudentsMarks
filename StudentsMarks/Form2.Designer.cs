@@ -51,11 +51,15 @@
             this.iDСтудентаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDГруппыDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.фИОDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.студентыGridControl = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.studentsMarksDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.студентыBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.студентыBindingNavigator)).BeginInit();
             this.студентыBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.студентыGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // studentsMarksDataSet
@@ -105,7 +109,7 @@
             this.студентыBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.студентыBindingNavigator.Name = "студентыBindingNavigator";
             this.студентыBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.студентыBindingNavigator.Size = new System.Drawing.Size(405, 25);
+            this.студентыBindingNavigator.Size = new System.Drawing.Size(761, 25);
             this.студентыBindingNavigator.TabIndex = 0;
             this.студентыBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -235,11 +239,28 @@
             this.фИОDataGridViewTextBoxColumn.HeaderText = "ФИО";
             this.фИОDataGridViewTextBoxColumn.Name = "фИОDataGridViewTextBoxColumn";
             // 
+            // студентыGridControl
+            // 
+            this.студентыGridControl.DataSource = this.студентыBindingSource;
+            this.студентыGridControl.Location = new System.Drawing.Point(393, 46);
+            this.студентыGridControl.MainView = this.gridView1;
+            this.студентыGridControl.Name = "студентыGridControl";
+            this.студентыGridControl.Size = new System.Drawing.Size(329, 220);
+            this.студентыGridControl.TabIndex = 2;
+            this.студентыGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.студентыGridControl;
+            this.gridView1.Name = "gridView1";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 310);
+            this.ClientSize = new System.Drawing.Size(761, 310);
+            this.Controls.Add(this.студентыGridControl);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.студентыBindingNavigator);
             this.Name = "Form2";
@@ -251,6 +272,8 @@
             this.студентыBindingNavigator.ResumeLayout(false);
             this.студентыBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.студентыGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,5 +302,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn iDСтудентаDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDГруппыDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn фИОDataGridViewTextBoxColumn;
+        private DevExpress.XtraGrid.GridControl студентыGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }
